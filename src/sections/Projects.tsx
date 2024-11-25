@@ -54,7 +54,7 @@ export const ProjectsSection = () => {
         <SectionHeader
           eyebrow="Real-world results"
           title="Featured Projects"
-          description="See how I transform contepts into engaging digital experiences."
+          description="See how I transform concepts into engaging digital experiences."
         />
 
         <div className="flex flex-col gap-20 mt-10 md:mt-20">
@@ -77,7 +77,10 @@ export const ProjectsSection = () => {
                   <hr className="border-t-2 border-white/5 mt-4 md:mt-5" />
                   <ul className="flex flex-col gap-4 mt-4 md:mt-5">
                     {project.results.map((result) => (
-                      <li className="flex gap-2 text-sm md:text-base text-white/50">
+                      <li
+                        className="flex gap-2 text-sm md:text-base text-white/50"
+                        key={result.title}
+                      >
                         <CheckCircleIcon className="size-5 md:size-6" />
                         <span>{result.title}</span>
                       </li>
